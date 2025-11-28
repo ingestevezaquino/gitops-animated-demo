@@ -9,21 +9,25 @@ spec:
     kind: Gateway                                                                
     name: traefik-gateway                                                        
     namespace: traefik-v2                                                        
-  rules:                                                                         
-  - backendRefs:                                                                 
-    - group: ""                                                                  
-      kind: Service                                                              
-      name: bubble-animation-svc                                                        
-      namespace: poc-ns                                                        
-      port: 8080                                                                 
-      weight: 1
-    filters:
-    - type: URLRewrite
-      urlRewrite:
-        path:
-          type: ReplacePrefixMatch
-          replacePrefixMatch: /
-    matches:                                                                     
-    - path:                                                           
+  rules:
+  - matches:
+    - path:
         type: PathPrefix
-        value: /bubbleapp
+        value: /bubble-app
+    filters:
+    - type: RequestRedirect
+      requestRedirect:
+        path:
+          type: ReplaceFullPath
+          replaceFullPath: /
+        statusCode: 308
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+      - kind: Service
+        name: bubble-animation-svc
+        namespace: poc-ns
+        port: 8080
+        weight: 1
