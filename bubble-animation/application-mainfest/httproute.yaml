@@ -12,7 +12,7 @@ spec:
   - backendRefs:                                                                 
     - group: ""                                                                  
       kind: Service                                                              
-      name: webserver-svc                                                        
+      name: bubble-animation-svc                                                        
       namespace: default                                                         
       port: 8080                                                                 
       weight: 1                                                                  
