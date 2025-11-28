@@ -4,7 +4,7 @@ kind: Service
 metadata:
   labels:
     app: bubble-animation
-  name: bubble-animation
+  name: bubble-animation-svc
 spec:
   ports:
   - port: 8080
