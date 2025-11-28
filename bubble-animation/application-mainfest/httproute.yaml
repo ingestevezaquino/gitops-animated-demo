@@ -21,7 +21,7 @@ spec:
             path:
               type: ReplaceFullPath
               replaceFullPath: /
-            statusCode: "302"
+            statusCode: 302
 
     # Regla 2: / -> backend bubble
     - matches:
