@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bubble-animation-app
-  namespace: openshift-gitops
+  namespace: bubble-animation
 spec:
   destination:
     namespace: bubble-animation
@@ -10,7 +10,7 @@ spec:
   project: default 
   source: 
     path: bubble-animation/application-mainfest
-    repoURL: https://gitlab.tuwien.ac.at/elnaz.montazeri/gitops-demo.git
+    repoURL: https://github.com/ingestevezaquino/gitops-animated-demo.git
     targetRevision: main
   syncPolicy: 
     automated:
