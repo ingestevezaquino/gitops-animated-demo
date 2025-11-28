@@ -5,7 +5,7 @@ metadata:
   labels:
     app: bubble-animation
   name: bubble-animation-svc
-  namespace: bubble-animation
+  namespace: poc-ns
 spec:
   ports:
   - port: 8080
