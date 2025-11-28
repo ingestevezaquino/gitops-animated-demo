@@ -25,5 +25,5 @@ spec:
           replacePrefixMatch: /
     matches:                                                                     
     - path:                                                           
-      type: PathPrefix
-      value: /bubble-app
+        type: PathPrefix
+        value: /bubble-app
