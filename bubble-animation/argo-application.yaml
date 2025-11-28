@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bubble-animation-app
-  namespace: bubble-animation
+  namespace: poc-ns
 spec:
   destination:
     namespace: bubble-animation
