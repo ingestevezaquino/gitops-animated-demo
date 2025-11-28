@@ -25,4 +25,4 @@ spec:
     matches:                                                                     
     - path:                                                           
       type: PathPrefix
-      value: /test-app
+      value: /animated-bubble
