@@ -5,7 +5,7 @@ metadata:
   labels:
     app: bubble-animation
   name: bubble-animation
-  namespace: bubble-animation
+  namespace: poc-ns
 spec:
   replicas: 1
   selector:
